@@ -30,11 +30,10 @@ export class HomeComponent implements OnInit {
         this.user = response;
         console.log(this.user);
         if (response) {
-          this.storageSvc.setUserId(25);
+          this.storageSvc.setUserId(this.user.dni);
           this.router.navigate(['/survey']);
         }
       });
   }
-
 
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PostgresService } from '../../services/postgres.service';
+import { StorageService } from '../../services/storage.service';
+import { MongoService } from '../../services/mongo.service';
 import { sectores, areas, otrasAreas } from '../../../assets/constants';
 import { Background } from '../../models/bakcground';
 import { CovidSurvey } from '../../models/survey';
@@ -19,7 +21,9 @@ export class SurveyComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private postgresSvc: PostgresService
+    private postgresSvc: PostgresService,
+    private storageSvc: StorageService,
+    private mongoSvc: MongoService
   ) { }
 
   ngOnInit(): void {
@@ -58,14 +62,20 @@ export class SurveyComponent implements OnInit {
     console.log('validations');
     const covidSurvey = new CovidSurvey(this.surveyForm);
     const background = new Background(this.surveyForm);
+    const id = this.storageSvc.getUserId();
 
     const finalObj = {
+      id,
       covidSurvey,
       background
     };
 
-    this.postgresSvc.submit(finalObj).subscribe(() => {
-
+    this.postgresSvc.submit(finalObj).subscribe((response) => {
+      if (response) {
+        this.mongoSvc.getQR(id).subscribe((response) => {
+          // render
+        });
+      }
     });
   }
 
