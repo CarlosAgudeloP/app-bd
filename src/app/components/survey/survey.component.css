@@ -1,0 +1,30 @@
+div.container {
+    width: 100vw;
+    min-width: 100vh;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+mat-radio-button {
+    padding: 0 0.5rem
+}
+
+.title {
+    font-weight: bold;
+    color: lightblue;
+}
+
+.section {
+    padding: 1rem 0;
+}
+
+.questions {
+    padding: 0 1rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}

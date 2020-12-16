@@ -7,13 +7,15 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class PostgresService {
+  // tslint:disable-next-line: variable-name
+  api_base = 'http://localhost:8080';
 
   constructor(private http: HttpClient) {
     console.log('Postgres Service Listo');
   }
 
   getQuery(query: string): Observable<any> {
-    const url = `http://localhost:8080/v1-infopoli/${query}`;
+    const url = `${this.api_base}/v1-infopoli/${query}`;
 
     return this.http.get(url).pipe(
       catchError((err) => {
@@ -25,6 +27,15 @@ export class PostgresService {
 
   getUser(user: string): Observable<any> {
     return this.getQuery(`findUser/${user}`);
+  }
+
+  submit(obj: any): Observable<any> {
+    return this.http.post(`${this.api_base}/v1-infopersonal/save`, obj).pipe(
+      catchError((err) => {
+        console.log('Not saved', err);
+        return of(null);
+      })
+    );
   }
 
 }

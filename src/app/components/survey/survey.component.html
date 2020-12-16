@@ -1,0 +1,222 @@
+<div class="container">
+  <form [formGroup]="surveyForm" (ngSubmit)="onSubmit()">
+    <div class="section">
+      <h3 class="title">
+        Antecedentes. ¿Ha tenido alguno de los siguientes antecedentes?
+      </h3>
+      <div class="questions">
+
+        <mat-radio-group aria-label="Select an option" formControlName="cardiovascular">
+          <p>Hipertensión arterial o enfermedad cardio-vascular, infartos, enfermedad cerebrovascular</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="diabetes">
+          <p>Diabetes</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="enfermedadesPulmoraner">
+          <p>Enfermedades pulmonares crónicas</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="enfermedadesRenales">
+          <p>Enfermedades renales (riñores o hepáticas)</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="enfermedadesAutoinmunes">
+          <p>Enfermedades autoinmunes, inmunosupresión, cancer o VIH</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="malnutricion">
+          <p>Malnutrición</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="tabaquismo">
+          <p>Tabaquismo</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="embarazo">
+          <p>Embarazo actualmente</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="mayoresEnCasa">
+          <p>Convive con personas mayores de 70 años o personas que trabajan en prestación asistencial en salud
+          </p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="tratamientos">
+          <p>Si lleva tratamiento médico por los antecedentes de salud, marque Si, de lo contrario marque No
+          </p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3 class="title">
+        ¿Ha tenido síntomas en los últimos dos días?
+      </h3>
+      <div class="questions">
+        <mat-radio-group aria-label="Select an option" formControlName="tos">
+          <p>Tos</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="garganta">
+          <p>Dolor de garganta</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="fiebre">
+          <p>Fiebre cuantificada mayor a 38°C</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="secrecion">
+          <p>Malestar general</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="malestar">
+          <p>Disminución de percepción de olores y sabores</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="olores">
+          <p>Embarazo actualmente</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="dificultadRespiratoria">
+          <p>Dificultad respiratoria</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="diarrea">
+          <p>Diarrea</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+    <div class="section">
+      <h3 class="title">
+        Identificación de contacto
+      </h3>
+      <div class="questions">
+        <mat-radio-group aria-label="Select an option" formControlName="contactoPositivo">
+          <p>¿En los últimos días ha tenido contacto estrecho (menor a 2 metros por 15 minutos sin protección) con una
+            persona con COVID-19 positivo?</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="contactoSintomas">
+          <p>¿En los últimos días ha tenido contacto estrecho (menor a 2 metros por 15 minutos sin protección) con una
+            persona con síntomas respiratorios y ud no sabe si tiene COVID-19 positivo?</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+    <div class="section">
+      <h3 class="title">
+        Sector de trabajo
+      </h3>
+      <div class="questions">
+        <p>¿En qué sector trabaja usted?</p>
+        <mat-form-field appearance="outline">
+          <mat-label>Sector</mat-label>
+          <mat-select formControlName="sector">
+            <mat-option *ngFor="let _sector of sectors" [value]="_sector">
+              {{_sector}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <p>Indique si durante la pandemia, usted ha estado trabajando en alguna de las siguientes areas</p>
+        <mat-form-field appearance="outline">
+          <mat-label>Área</mat-label>
+          <mat-select formControlName="trabajo">
+            <mat-option *ngFor="let area of areas" [value]="area">
+              {{area}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <p>En caso de que la pregunta anterior no aplique, por favor indique en que tipo de área está trabajando</p>
+        <mat-form-field appearance="outline">
+          <mat-label>Otra área</mat-label>
+          <mat-select formControlName="trabajoEspecifico">
+            <mat-option *ngFor="let otraArea of otrasAreas" [value]="otraArea">
+              {{otraArea}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="section">
+      <h3 class="title">
+        Pruebas diagnósticas
+      </h3>
+      <div class="questions">
+        <mat-radio-group aria-label="Select an option" formControlName="pruebaNariz">
+          <p>¿En los últimos 15 días le han realizado prueba de COVID-19 con muestra en nariz o garganta que ha salido
+            positiva?</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="pruebaSangre">
+          <p>¿En los últimos 15 días le han realizado prueba de COVID-19 en sangre que ha salido positiva?</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="aislamiento">
+          <p>¿En los últimos 15 días ha estado o está en aislamiento preventivo porque ha sido diagnosticado de
+            COVID-19?</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group aria-label="Select an option" formControlName="incapacidad">
+          <p>¿En los últimos 15 días ha tenido incapacidad temporal por caso asociado a COVID-19?</p>
+          <mat-radio-button value="1">Sí</mat-radio-button>
+          <mat-radio-button value="0">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+
+
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit" [disabled]="(surveyForm.invalid)">Enviar</button>
+    </div>
+  </form>
+</div>

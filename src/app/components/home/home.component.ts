@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PostgresService } from 'src/app/services/postgres.service';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private postgres: PostgresService,
+    private storageSvc: StorageService,
     private router: Router
   ) { }
 
@@ -28,6 +30,7 @@ export class HomeComponent implements OnInit {
         this.user = response;
         console.log(this.user);
         if (response) {
+          this.storageSvc.setUserId(25);
           this.router.navigate(['/survey']);
         }
       });
